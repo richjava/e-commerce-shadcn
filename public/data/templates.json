@@ -1,0 +1,39 @@
+{
+  "templates": [
+    {
+      "title": "Header 1",
+      "name": "header1",
+      "category": "headers"
+    },
+    {
+      "title": "Footer 1",
+      "name": "footer1",
+      "category": "footers"
+    },
+    {
+      "title": "Cover 1",
+      "name": "cover1",
+      "category": "covers",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737712661/builtjs/theme/richjava_e-commerce-shadcn/home-cover1.png"
+    },
+    {
+      "title": "Article 1",
+      "name": "article1",
+      "category": "articles",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713101/builtjs/theme/richjava_e-commerce-shadcn/product-article-article1.png"
+    },
+    {
+      "title": "List 1",
+      "name": "list1",
+      "category": "lists",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713769/productCategoryListLanding_gddyei.png",
+      "type": "dynamic"
+    },
+    {
+      "title": "List 2",
+      "name": "list2",
+      "category": "lists",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713084/builtjs/theme/richjava_e-commerce-shadcn/home-list2.png"
+    }
+  ]
+}

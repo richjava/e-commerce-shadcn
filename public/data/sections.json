@@ -1,0 +1,76 @@
+{
+  "sections": [
+    {
+      "name": "header",
+      "title": "Header",
+      "type": "layout",
+      "data": {},
+      "templates": ["header1"],
+      "defaultTemplate": { "name": "header1" },
+      "collections": { "primaryMenuItem": {} }
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "type": "layout",
+      "templates": ["footer1"],
+      "defaultTemplate": { "name": "footer1" },
+      "collections": {}
+    },
+    {
+      "name": "homeLanding",
+      "title": "Home Landing",
+      "data": {
+        "image1": {
+          "url": "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=500&h=500&fit=crop&q=80",
+          "width": 500,
+          "height": 500,
+          "type": "image"
+        },
+        "image2":  {
+          "url": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop&q=80",
+          "width": 500,
+          "height": 500,
+          "type": "image"
+        },
+        "heading": "Elevate Your Style with Premium Sportswear",
+        "blurb": "Discover our collection of premium athletic wear designed for performance and style. From innovative footwear to comfortable apparel, find your perfect fit."
+      },
+      "templates": ["cover1"],
+      "defaultTemplate": { "name": "cover1" },
+      "collections": {
+        "category": {},
+        "product": {}
+      }
+    },
+    {
+      "name": "productArticleLanding",
+      "title": "Product Article Landing",
+      "templates": ["article1"],
+      "defaultTemplate": { "name": "article1" }
+    },
+    {
+      "name": "productCategoryListLanding",
+      "title": "Product Category List Landing",
+      "templates": ["list1"],
+      "defaultTemplate": { "name": "list1" },   
+      "collections": { "product": {
+        "config": {
+          "populate": [
+            {
+              "name": "category"
+            }
+          ]
+        },
+        "params": ["category"]
+      } }
+    },
+    {
+      "name": "featureList",
+      "title": "Feature List",
+      "templates": ["list2"],
+      "defaultTemplate": { "name": "list2" },   
+      "collections": { "feature": {} }
+    }
+  ]
+}

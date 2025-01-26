@@ -1,0 +1,531 @@
+{
+  "contentTypes": [
+    {
+      "name": "primaryMenuItem",
+      "fields": {
+        "slug": {
+          "type": "uid",
+          "targetField": "label",
+          "required": true
+        },
+        "label": {
+          "type": "string",
+          "required": true
+        },
+        "url": {
+          "type": "string",
+          "unique": true,
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "product",
+      "fields": {
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "uid",
+          "targetField": "name",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "required": true
+        },
+        "price": {
+          "type": "number"
+        },
+        "price_id": {
+          "type": "string",
+          "required": false
+        },
+        "image": {
+          "type": "image"
+        },
+        "images": {
+          "type": "array",
+          "arrayType": "image",
+          "items": {
+            "type": "image"
+          }
+        },
+        "category": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "category"
+        }
+      }
+    },
+    {
+      "name": "category",
+      "fields": {
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "uid",
+          "targetField": "name",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "feature",
+      "fields": {
+        "title": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  ],
+  "pages": [
+    {
+      "title": "Home",
+      "name": "home",
+      "demoSections": [
+        {
+          "name": "homeLanding"
+        },
+        {
+          "name": "featureList"
+        }
+      ]
+    },
+    {
+      "title": "Product Article",
+      "name": "productArticle",
+      "demoSections": [
+        {
+          "name": "productArticleLanding"
+        }
+      ],
+      "contentType": {
+        "name": "product",
+        "config": {
+          "populate": [
+            {
+              "name": "category"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "title": "Category Article",
+      "name": "categoryArticle",
+      "demoSections": [],
+      "contentType": {
+        "name": "category",
+        "config": {
+          "populate": []
+        }
+      }
+    },
+    {
+      "title": "Product Category List",
+      "name": "productCategoryList",
+      "demoSections": [
+        {
+          "name": "productCategoryListLanding"
+        }
+      ],
+      "path": "/products",
+      "routeParams": [
+        "category"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "name": "header",
+      "title": "Header",
+      "type": "layout",
+      "data": {},
+      "templates": [
+        "header1"
+      ],
+      "defaultTemplate": {
+        "name": "header1"
+      },
+      "collections": {
+        "primaryMenuItem": {}
+      }
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "type": "layout",
+      "templates": [
+        "footer1"
+      ],
+      "defaultTemplate": {
+        "name": "footer1"
+      },
+      "collections": {}
+    },
+    {
+      "name": "homeLanding",
+      "title": "Home Landing",
+      "data": {
+        "image1": {
+          "url": "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=500&h=500&fit=crop&q=80",
+          "width": 500,
+          "height": 500,
+          "type": "image"
+        },
+        "image2": {
+          "url": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop&q=80",
+          "width": 500,
+          "height": 500,
+          "type": "image"
+        },
+        "heading": "Elevate Your Style with Premium Sportswear",
+        "blurb": "Discover our collection of premium athletic wear designed for performance and style. From innovative footwear to comfortable apparel, find your perfect fit."
+      },
+      "templates": [
+        "cover1"
+      ],
+      "defaultTemplate": {
+        "name": "cover1"
+      },
+      "collections": {
+        "category": {},
+        "product": {}
+      }
+    },
+    {
+      "name": "productArticleLanding",
+      "title": "Product Article Landing",
+      "templates": [
+        "article1"
+      ],
+      "defaultTemplate": {
+        "name": "article1"
+      }
+    },
+    {
+      "name": "productCategoryListLanding",
+      "title": "Product Category List Landing",
+      "templates": [
+        "list1"
+      ],
+      "defaultTemplate": {
+        "name": "list1"
+      },
+      "collections": {
+        "product": {
+          "config": {
+            "populate": [
+              {
+                "name": "category"
+              }
+            ]
+          },
+          "params": [
+            "category"
+          ]
+        }
+      }
+    },
+    {
+      "name": "featureList",
+      "title": "Feature List",
+      "templates": [
+        "list2"
+      ],
+      "defaultTemplate": {
+        "name": "list2"
+      },
+      "collections": {
+        "feature": {}
+      }
+    }
+  ],
+  "templates": [
+    {
+      "title": "Header 1",
+      "name": "header1",
+      "category": "headers"
+    },
+    {
+      "title": "Footer 1",
+      "name": "footer1",
+      "category": "footers"
+    },
+    {
+      "title": "Cover 1",
+      "name": "cover1",
+      "category": "covers",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737712661/builtjs/theme/richjava_e-commerce-shadcn/home-cover1.png"
+    },
+    {
+      "title": "Article 1",
+      "name": "article1",
+      "category": "articles",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713101/builtjs/theme/richjava_e-commerce-shadcn/product-article-article1.png"
+    },
+    {
+      "title": "List 1",
+      "name": "list1",
+      "category": "lists",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737712685/builtjs/theme/richjava_e-commerce-shadcn/product-category-list-list1.png"
+    },
+    {
+      "title": "List 2",
+      "name": "list2",
+      "category": "lists",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713084/builtjs/theme/richjava_e-commerce-shadcn/home-list2.png"
+    },
+    {
+      "title": "Header 1",
+      "name": "header1",
+      "category": "headers"
+    },
+    {
+      "title": "Footer 1",
+      "name": "footer1",
+      "category": "footers"
+    },
+    {
+      "title": "Cover 1",
+      "name": "cover1",
+      "category": "covers",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737712661/builtjs/theme/richjava_e-commerce-shadcn/home-cover1.png"
+    },
+    {
+      "title": "Article 1",
+      "name": "article1",
+      "category": "articles",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713101/builtjs/theme/richjava_e-commerce-shadcn/product-article-article1.png"
+    },
+    {
+      "title": "List 1",
+      "name": "list1",
+      "category": "lists",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737712685/builtjs/theme/richjava_e-commerce-shadcn/product-category-list-list1.png"
+    },
+    {
+      "title": "List 2",
+      "name": "list2",
+      "category": "lists",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713084/builtjs/theme/richjava_e-commerce-shadcn/home-list2.png"
+    }
+  ],
+  "layout": {
+    "contentIndex": 1,
+    "sections": [
+      {
+        "name": "header"
+      },
+      {
+        "name": "footer"
+      }
+    ]
+  },
+  "collections": {
+    "categories": [
+      {
+        "_id": "category-IbV1ctWSa",
+        "_type": "category",
+        "name": "Men",
+        "slug": "men"
+      },
+      {
+        "_id": "category-N0sdgcZaZ",
+        "_type": "category",
+        "name": "Women",
+        "slug": "women"
+      },
+      {
+        "_id": "category-K9a1e7NUx",
+        "_type": "category",
+        "name": "Teens",
+        "slug": "teens"
+      }
+    ],
+    "features": [
+      {
+        "_id": "feature1",
+        "_type": "feature",
+        "icon": "ShoppingBag",
+        "title": "Premium Selection",
+        "description": "Curated collection of high-quality products"
+      },
+      {
+        "_id": "feature2",
+        "_type": "feature",
+        "icon": "Truck",
+        "title": "Fast Delivery",
+        "description": "Free shipping on orders over $100"
+      },
+      {
+        "_id": "feature3",
+        "_type": "feature",
+        "icon": "Shield",
+        "title": "Secure Shopping",
+        "description": "100% secure payment processing"
+      }
+    ],
+    "primaryMenuItems": [
+      {
+        "_type": "primaryMenuItem",
+        "slug": "home",
+        "label": "Home",
+        "url": "/"
+      }
+    ],
+    "products": [
+      {
+        "_id": "product1",
+        "_type": "product",
+        "name": "Noke Air Max Pulse",
+        "description": "Experience the future of comfort with the Noke Air Max Pulse. Featuring revolutionary cushioning technology and a sleek, modern design, these sneakers deliver unmatched performance for both athletes and style enthusiasts. The breathable mesh upper and responsive Air unit combine to create the perfect balance of style and functionality.",
+        "price_id": "",
+        "price": 160,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          }
+        ],
+        "image": {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop&q=80",
+          "width": 500,
+          "height": 500,
+          "type": "image"
+        },
+        "slug": "noke-air-max-pulse",
+        "category": "category-IbV1ctWSa"
+      },
+      {
+        "_id": "product2",
+        "_type": "product",
+        "name": "Noke Tech Fleece Hoodie",
+        "description": "Stay warm without the bulk in the Noke Tech Fleece Hoodie. This innovative garment combines lightweight warmth with a modern silhouette, making it perfect for both athletic activities and casual wear. The advanced thermal construction keeps you cozy while maintaining a sleek, athletic profile.",
+        "price_id": "",
+        "price": 130,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          }
+        ],
+        "image": {
+          "url": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&h=500&fit=crop&q=80",
+          "width": 500,
+          "height": 500,
+          "type": "image"
+        },
+        "slug": "noke-tech-fleece-hoodie",
+        "category": "category-N0sdgcZaZ"
+      },
+      {
+        "_id": "product3",
+        "_type": "product",
+        "name": "Noke Heritage86 Baseball Cap",
+        "description": "Classic style meets modern comfort in the Noke Heritage86 Baseball Cap. Featuring Dri-FIT technology to wick away sweat and a classic six-panel design with an adjustable closure for the perfect fit. The timeless silhouette and embroidered Swoosh logo make this cap perfect for both athletic activities and everyday wear.",
+        "price_id": "",
+        "price": 25,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1534215754734-18e55d13e346?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1517941823-815bea90d291?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          }
+        ],
+        "image": {
+          "url": "https://images.unsplash.com/photo-1534215754734-18e55d13e346?w=500&h=500&fit=crop&q=80",
+          "width": 500,
+          "height": 500,
+          "type": "image"
+        },
+        "slug": "noke-dri-fit-running-shorts",
+        "category": "category-N0sdgcZaZ"
+      },
+      {
+        "_id": "product4",
+        "_type": "product",
+        "name": "Noke Pro Training Tights",
+        "description": "Dominate your workouts in the Noke Pro Training Tights. These compression tights deliver strategic support and unrestricted movement for any training session. The sweat-wicking fabric and ergonomic seams work together to keep you dry and chafe-free, while the compressive fit helps reduce muscle fatigue during intense activities.",
+        "price_id": "",
+        "price": 65,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop&q=80",
+            "width": 500,
+            "height": 500,
+            "type": "image"
+          }
+        ],
+        "image": {
+          "url": "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=500&h=500&fit=crop&q=80",
+          "width": 500,
+          "height": 500,
+          "type": "image"
+        },
+        "slug": "noke-pro-training-tights",
+        "category": "category-K9a1e7NUx"
+      }
+    ]
+  },
+  "plugins": [],
+  "global": {
+    "name": "E-Commerce ShadCN",
+    "logo": {
+      "url": "https://res.cloudinary.com/dn7feeelf/image/upload/v1725878836/builtjs_mluhyw.svg",
+      "path": "/images/theme/builtjs.svg",
+      "width": 45,
+      "height": 45,
+      "type": "image"
+    }
+  }
+}

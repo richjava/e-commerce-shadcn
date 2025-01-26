@@ -1,0 +1,21 @@
+{
+  "theme": {
+    "title": "E-Commerce ShadCN",
+    "namespace": "richjava_e-commerce-shadcn",
+    "config": {
+      "dependencies": [
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-slot",
+        "@stripe/stripe-js",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "stripe",
+        "tailwind-merge",
+        "tailwindcss-animate",
+        "use-shopping-cart"
+      ],
+      "devDependencies": ["autoprefixer", "postcss", "tailwindcss"]
+    }
+  }
+}

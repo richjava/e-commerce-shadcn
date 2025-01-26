@@ -1,0 +1,15 @@
+{
+  "modules": [
+    {
+      "name": "shop",
+      "title": "Shop",
+      "description": "Sell products",
+      "modulePages": [
+        { "name": "homeBase" },
+        { "name": "shopProductArticle" },
+        { "name": "shopProductCategoryList" }
+      ],
+      "required": true
+    }
+  ]
+}

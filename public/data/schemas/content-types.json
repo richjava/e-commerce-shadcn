@@ -1,0 +1,48 @@
+{
+  "contentTypes": [
+    {
+      "name": "primaryMenuItem",
+      "fields": {
+        "slug": { "type": "uid", "targetField": "label", "required": true },
+        "label": { "type": "string", "required": true },
+        "url": { "type": "string", "unique": true, "required": true }
+      }
+    },
+    {
+      "name": "product",
+      "fields": {
+        "name": { "type": "string" },
+        "slug": { "type": "uid", "targetField": "name", "required": true },
+        "description": { "type": "string", "required": true },
+        "price": { "type": "number" },
+        "price_id": { "type": "string", "required": false },
+        "image": { "type": "image" },
+        "images": {
+          "type": "array",
+          "arrayType": "image",
+          "items": { "type": "image" }
+        },
+        "category": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "category"
+        }
+      }
+    },
+    {
+      "name": "category",
+      "fields": {
+        "name": { "type": "string" },
+        "slug": { "type": "uid", "targetField": "name", "required": true }
+      }
+    },
+    {
+      "name": "feature",
+      "fields": {
+        "title": { "type": "string" },
+        "icon": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    }
+  ]
+}
