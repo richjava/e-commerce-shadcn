@@ -2,6 +2,8 @@
   "theme": {
     "title": "E-Commerce ShadCN",
     "namespace": "richjava_e-commerce-shadcn",
+    "repoUrl": "https://github.com/richjava/e-commerce-shadcn",
+    "demoUrl": "https://e-commerce-shadcn.vercel.app",
     "config": {
       "dependencies": [
         "@radix-ui/react-dialog",
