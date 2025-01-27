@@ -6,7 +6,6 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/shared/sheet";
-import { widthForImage, heightForImage } from "@/lib/builtjs-utils";
 
 import Image from "next/image";
 import { useShoppingCart } from "use-shopping-cart";
@@ -24,7 +23,7 @@ export default function ShoppingCartModal() {
   async function handleCheckoutClick(event: any) {
     event.preventDefault();
     try {
-      const result = await redirectToCheckout();
+      // const result = await redirectToCheckout();
     } catch (error) {
       console.log(error);
     }

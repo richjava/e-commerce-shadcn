@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/shared/Button";
 import { useShoppingCart } from "use-shopping-cart";
-import { urlForImage } from "@/lib/builtjs-utils";
 
 export interface ProductCart {
   name: string;

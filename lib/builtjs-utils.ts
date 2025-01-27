@@ -25,9 +25,9 @@ export async function getComponentMap(sections:any) {
 export function getComponents(sections:any) {
   return new Promise((resolve) => {
     getComponentMap(sections).then((map:any) => {
-      let comps = [];
+      const comps = [];
       for (const key of Object.keys(map)) {
-        let comp = dynamic(() => map[key], {
+        const comp = dynamic(() => map[key], {
           suspense: false,
         });
         comps.push(comp);
