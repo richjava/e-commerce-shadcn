@@ -6,7 +6,7 @@ import { Star, Truck } from "lucide-react";
 
 export default function Article1({ content }: any) {
   if (!content) return <></>;
-  let { entry = null } = { ...content };
+  const { entry = null } = { ...content };
   return (
     <section className="py-10">
       <div id="article1" className="max-w-screen-xl px-4 mx-auto md:px-8">

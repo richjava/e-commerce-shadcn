@@ -12,11 +12,11 @@ import { useState } from "react";
 
 export default function Header1({ content }: any) {
   const [isOpen, setIsOpen] = useState(false);
-  if (!content) return <></>;
-  const { collections = {}, global = {} } = { ...content };
   const pathname = usePathname();
   const { handleCartClick } = useShoppingCart();
-
+  if (!content) return <></>;
+  const { collections = {}, global = {} } = { ...content };
+  
   const NavItems = () => (
     <>
       {collections["primaryMenuItem"] &&

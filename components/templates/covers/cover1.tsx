@@ -4,9 +4,9 @@ import { entrySlug } from "@/lib/builtjs-utils";
 
 export default function Cover1({ content }: any) {
   if (!content) return <></>;
-  let { collections = null } = { ...content };
-  let categories = collections["category"];
-  let products = collections["product"];
+  const { collections = null } = { ...content };
+  const categories = collections["category"];
+  const products = collections["product"];
   return (
     <section id="cover1" className="relative flex-1 bg-gray-50">
       <div className="container mx-auto min-h-[calc(100vh-5rem)] flex flex-col lg:flex-row items-center gap-4 px-4 py-6">
@@ -23,8 +23,9 @@ export default function Cover1({ content }: any) {
           <div className="flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <div className="flex w-64 h-12 overflow-hidden border divide-x rounded-lg">
               {categories &&
-                categories.map((category: any) => (
+                categories.map((category: any, index: number) => (
                   <Link
+                    key={index}
                     href={`/products/${category._id}`}
                     className="flex items-center justify-center w-1/3 text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
                   >
@@ -41,7 +42,7 @@ export default function Cover1({ content }: any) {
             {products.slice(0, 3).map((product: any, index: number) => (
               <Link
                 href={`/product/${entrySlug(product)}`}
-                key={product._id}
+                key={index}
                 className={`relative rounded-lg overflow-hidden ${
                   index === 0
                     ? "col-span-2 row-span-2 aspect-[16/9] lg:aspect-[16/10]"

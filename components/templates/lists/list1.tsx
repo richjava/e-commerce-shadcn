@@ -7,12 +7,12 @@ import { useParams } from "next/navigation";
 import { widthForImage, heightForImage, entrySlug } from "@/lib/builtjs-utils";
 
 export default function List1({ content, api }: any) {
-  if (!content) return <></>;
   const [category, setCategory] = useState<any>(null);
   const [products, setProducts] = useState<any>([]);
+  const { fetchEntry = null } = { ...api };
   const hasFetched = useRef(false);
-  let { fetchEntry = null, fetchEntries = null } = { ...api };
   const params = useParams<{ category: string }>();
+  if (!content) return <></>;
 
   useEffect(() => {
     async function fetchData() {

@@ -5,7 +5,7 @@ import * as Icons from 'lucide-react';
 
 export default function List1({ content }: any) {
   if (!content) return <></>;
-  const { collections = {}, global = {} } = { ...content };
+  const { collections = {}} = { ...content };
 
   const LucideIcon = ({ name }: { name: string }) => {
     const Icon = Icons[name as keyof typeof Icons];

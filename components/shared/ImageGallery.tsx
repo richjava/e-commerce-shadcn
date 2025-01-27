@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { urlForImage } from "@/lib/builtjs-utils";
 import { useState } from "react";
 import { widthForImage, heightForImage } from "@/lib/builtjs-utils";
 
