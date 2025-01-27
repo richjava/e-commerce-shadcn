@@ -7,9 +7,15 @@ export default function List1({ content }: any) {
   if (!content) return <></>;
   const { collections = {} } = { ...content };
 
-  const LucideIcon = ({ name }: { name: string }) => {
-    const Icon = Icons[name as keyof typeof Icons] as React.ElementType; // Ensure it's a valid React component
-    return Icon ? <Icon className="w-8 h-8 text-primary" /> : null;
+  const LucideIcon = ({
+    name,
+    className,
+  }: {
+    name: string;
+    className?: string;
+  }) => {
+    const Icon = Icons[name as keyof typeof Icons] as React.ElementType;
+    return Icon ? <Icon className={className} /> : null;
   };
 
   return (
