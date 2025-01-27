@@ -18,7 +18,7 @@ export default function ShoppingCartModal() {
     cartDetails,
     removeItem,
     totalPrice,
-    redirectToCheckout,
+    // redirectToCheckout,
   } = useShoppingCart();
   async function handleCheckoutClick(event: any) {
     event.preventDefault();

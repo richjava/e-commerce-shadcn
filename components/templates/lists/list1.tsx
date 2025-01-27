@@ -12,7 +12,6 @@ export default function List1({ content, api }: any) {
   const { fetchEntry = null } = { ...api };
   const hasFetched = useRef(false);
   const params = useParams<{ category: string }>();
-  if (!content) return <></>;
 
   useEffect(() => {
     async function fetchData() {
@@ -39,7 +38,7 @@ export default function List1({ content, api }: any) {
       fetchData();
     }
   }, []);
-
+  if (!content) return <></>;
 
   return (
     <section id="productCategoryListLanding" className="py-10 min-h-[520px]">
