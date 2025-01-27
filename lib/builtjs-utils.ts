@@ -22,10 +22,10 @@ export async function getComponentMap(sections:any) {
   });
 }
 
-export function getComponents(sections:any) {
+export function getComponents(sections: any): Promise<React.ComponentType<{}>[]> {
   return new Promise((resolve) => {
-    getComponentMap(sections).then((map:any) => {
-      const comps = [];
+    getComponentMap(sections).then((map: any) => {
+      const comps: React.ComponentType<{}>[] = [];
       for (const key of Object.keys(map)) {
         const comp = dynamic(() => map[key]);
         comps.push(comp);
