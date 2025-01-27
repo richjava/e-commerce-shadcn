@@ -2,7 +2,7 @@
 
 A [Built.js](https://builtjs.com) theme for simple e-commerce websites with ShadCN.
 
-Demo: [https://github.com/richjava/ecommerce-shadcn](https://github.com/richjava/ecommerce-shadcn)
+Demo: [https://e-commerce-shadcn.vercel.app/](https://e-commerce-shadcn.vercel.app)
 
 ### Installation
 1. Install dependencies:
