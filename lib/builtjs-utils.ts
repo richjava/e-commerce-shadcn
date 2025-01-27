@@ -2,8 +2,7 @@ import getConfig from "next/config";
 import dynamic from "next/dynamic";
 const { publicRuntimeConfig } = getConfig();
 
-// Define the type for the component map.
-type ComponentMap = Record<string, Promise<{ default: React.ComponentType<{}> }>>;
+type ComponentMap = Record<string, Promise<{ default: React.ComponentType<any> }>>;
 
 export async function getComponentMap(sections: any): Promise<ComponentMap> {
   const map: ComponentMap = {};
@@ -23,11 +22,10 @@ export async function getComponentMap(sections: any): Promise<ComponentMap> {
   return map;
 }
 
-// Update getComponents to return a correctly typed Promise.
-export function getComponents(sections: any): Promise<React.ComponentType<{}>[]> {
+export function getComponents(sections: any): Promise<React.ComponentType<any>[]> {
   return new Promise((resolve) => {
     getComponentMap(sections).then((map: ComponentMap) => {
-      const comps: React.ComponentType<{}>[] = [];
+      const comps: React.ComponentType<any>[] = [];
       for (const key of Object.keys(map)) {
         const comp = dynamic(() => map[key].then(mod => mod.default));
         comps.push(comp);
