@@ -12,18 +12,8 @@
         "image2": { "type": "image" }
       }
     },
-    "newestProducts": {
-      "name": "newestProducts",
-      "type": "body",
-      "fields": { "heading": { "type": "string" } }
-    },
     "productArticleLanding": {
       "name": "productArticleLanding",
-      "type": "body",
-      "fields": {}
-    },
-    "categoryArticleLanding": {
-      "name": "categoryArticleLanding",
       "type": "body",
       "fields": {}
     },
@@ -31,8 +21,8 @@
       "name": "productCategoryListLanding",
       "type": "body"
     },
-    "featureList": {
-      "name": "featureList",
+    "benefitList": {
+      "name": "benefitList",
       "type": "body"
     }
   }

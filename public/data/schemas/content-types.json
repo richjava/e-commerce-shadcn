@@ -37,7 +37,7 @@
       }
     },
     {
-      "name": "feature",
+      "name": "benefit",
       "fields": {
         "title": { "type": "string" },
         "icon": { "type": "string" },

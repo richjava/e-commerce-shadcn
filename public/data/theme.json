@@ -2,8 +2,10 @@
   "theme": {
     "title": "E-Commerce ShadCN",
     "namespace": "richjava_e-commerce-shadcn",
+    "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737712661/builtjs/theme/richjava_e-commerce-shadcn/home-cover1.png",
     "repoUrl": "https://github.com/richjava/e-commerce-shadcn",
     "demoUrl": "https://e-commerce-shadcn.vercel.app",
+    "plugins": ["richjava_about-shadcn"],
     "config": {
       "dependencies": [
         "@radix-ui/react-dialog",

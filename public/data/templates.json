@@ -20,7 +20,7 @@
       "title": "Article 1",
       "name": "article1",
       "category": "articles",
-      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713101/builtjs/theme/richjava_e-commerce-shadcn/product-article-article1.png"
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1738142416/builtjs/theme/richjava_e-commerce-shadcn/product-article-article1.png"
     },
     {
       "title": "List 1",
@@ -33,7 +33,7 @@
       "title": "List 2",
       "name": "list2",
       "category": "lists",
-      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713084/builtjs/theme/richjava_e-commerce-shadcn/home-list2.png"
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1738142376/builtjs/theme/richjava_e-commerce-shadcn/home-list2.png"
     }
   ]
 }

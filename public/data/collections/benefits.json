@@ -1,22 +1,22 @@
 {
   "data": [
     {
-      "_id": "feature1",
-      "_type": "feature",
+      "_id": "benefit1",
+      "_type": "benefit",
       "icon": "ShoppingBag",
       "title": "Premium Selection",
       "description": "Curated collection of high-quality products"
     },
     {
-      "_id": "feature2",
-      "_type": "feature",
+      "_id": "benefit2",
+      "_type": "benefit",
       "icon": "Truck",
       "title": "Fast Delivery",
       "description": "Free shipping on orders over $100"
     },
     {
-      "_id": "feature3",
-      "_type": "feature",
+      "_id": "benefit3",
+      "_type": "benefit",
       "icon": "Shield",
       "title": "Secure Shopping",
       "description": "100% secure payment processing"

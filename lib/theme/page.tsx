@@ -9,8 +9,8 @@ const Page = ({ config }: any) => {
   const { slug } = router.query;
 
   const [page, setPage] = useState<any>(null);
-  const [sectionComps, setSectionComps] = useState<React.ComponentType<any>[]>([]);  // Updated to 'any'
-  const [layoutComps, setLayoutComps] = useState<React.ComponentType<any>[]>([]);  // Updated to 'any'
+  const [sectionComps, setSectionComps] = useState<React.ComponentType<any>[]>([]);
+  const [layoutComps, setLayoutComps] = useState<React.ComponentType<any>[]>([]);
 
   useEffect(() => {
     setPage(null);
@@ -39,7 +39,7 @@ const Page = ({ config }: any) => {
     <Layout layoutComps={layoutComps} page={page}>
       {page &&
         sectionComps.length > 0 &&
-        sectionComps.map((Section: React.ComponentType<any>, i: number) => (  // Updated 'any' for Section
+        sectionComps.map((Section: React.ComponentType<any>, i: number) => (
           page.sections[i] && (
             <Section
               key={i}

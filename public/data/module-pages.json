@@ -4,7 +4,7 @@
       "title": "Home Base",
       "name": "homeBase",
       "page": { "name": "home" },
-      "sections": [{ "name": "homeLanding", "position": 1}, {"name": "featureList", "position": 2 }]
+      "sections": [{ "name": "homeLanding", "position": 1}, {"name": "benefitList", "position": 2 }]
     },
     {
       "title": "Shop Product Article",

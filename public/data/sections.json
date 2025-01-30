@@ -66,11 +66,11 @@
       } }
     },
     {
-      "name": "featureList",
-      "title": "Feature List",
+      "name": "benefitList",
+      "title": "Benefit List",
       "templates": ["list2"],
       "defaultTemplate": { "name": "list2" },   
-      "collections": { "feature": {} }
+      "collections": { "benefit": {} }
     }
   ]
 }

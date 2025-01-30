@@ -17,12 +17,6 @@
       }
     },
     {
-      "title": "Category Article",
-      "name": "categoryArticle",
-      "demoSections": [],
-      "contentType": { "name": "category", "config": { "populate": [] } }
-    },
-    {
       "title": "Product Category List",
       "name": "productCategoryList",
       "demoSections": [{ "name": "productCategoryListLanding" }],
