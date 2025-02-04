@@ -16,7 +16,6 @@ export default function List2({ content }: any) {
     const Icon = Icons[name as keyof typeof Icons] as React.ElementType;
     return Icon ? <Icon className={className} /> : null;
   };
-  console.log({collections})
 
   return (
     <section id="list2" className="py-16 bg-white">
