@@ -83,7 +83,8 @@
           "unique": true,
           "required": true
         }
-      }
+      },
+      "namespace": "richjava_about-shadcn"
     },
     {
       "name": "product",
@@ -164,6 +165,9 @@
       "title": "Home",
       "demoSections": [
         {
+          "name": "homeSeo"
+        },
+        {
           "name": "homeLanding"
         },
         {
@@ -191,6 +195,9 @@
         }
       ],
       "demoSections": [
+        {
+          "name": "aboutSeo"
+        },
         {
           "name": "aboutHero"
         },
@@ -274,7 +281,32 @@
       "defaultTemplate": {
         "name": "header1"
       },
-      "data": {}
+      "namespace": "richjava_about-shadcn"
+    },
+    {
+      "name": "aboutSeo",
+      "title": "About SEO",
+      "data": {
+        "pageTitle": "About | About ShadCN Built.js Plugin",
+        "description": "About page for a site built with the About ShadCN Built.js Plugin.",
+        "shareImage": {
+          "url": "https://res.cloudinary.com/dn7feeelf/image/upload/v1725878797/image_ldyekv.png",
+          "path": "/images/image.png",
+          "width": 1280,
+          "height": 768,
+          "type": "image"
+        },
+        "twitterCardType": "summary"
+      },
+      "templates": [
+        "seo"
+      ],
+      "type": "head",
+      "defaultTemplate": {
+        "name": "seo"
+      },
+      "collections": {},
+      "namespace": "richjava_about-shadcn"
     },
     {
       "name": "aboutHero",
@@ -387,6 +419,30 @@
       "type": "layout",
       "defaultTemplate": {
         "name": "footer1"
+      },
+      "namespace": "richjava_about-shadcn"
+    },
+    {
+      "name": "homeSeo",
+      "title": "Home SEO",
+      "data": {
+        "pageTitle": "Home | E-Commerce ShadCN Built.js Theme",
+        "description": "Home page for a site built with the E-Commerce ShadCN Built.js Theme.",
+        "shareImage": {
+          "url": "https://res.cloudinary.com/dn7feeelf/image/upload/v1725878797/image_ldyekv.png",
+          "path": "/images/image.png",
+          "width": 1280,
+          "height": 768,
+          "type": "image"
+        },
+        "twitterCardType": "summary"
+      },
+      "templates": [
+        "seo"
+      ],
+      "type": "head",
+      "defaultTemplate": {
+        "name": "seo"
       },
       "collections": {}
     },
@@ -524,6 +580,13 @@
       "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1733652242/builtjs/plugin/richjava_about-shad-cn/team-member-profile1.png"
     },
     {
+      "name": "seo",
+      "title": "SEO",
+      "category": "head",
+      "namespace": "richjava_about-shadcn",
+      "description": "Define SEO meta titles, meta descriptions and social media meta data."
+    },
+    {
       "title": "Header 1",
       "name": "header1",
       "category": "headers"
@@ -532,6 +595,12 @@
       "title": "Footer 1",
       "name": "footer1",
       "category": "footers"
+    },
+    {
+      "name": "seo",
+      "title": "SEO",
+      "category": "head",
+      "description": "Define SEO meta titles, meta descriptions and social media meta data."
     },
     {
       "title": "Cover 1",

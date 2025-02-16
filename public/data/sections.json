@@ -18,6 +18,26 @@
       "collections": {}
     },
     {
+      "name": "homeSeo",
+      "title": "Home SEO",
+      "data": {
+        "pageTitle": "Home | E-Commerce ShadCN Built.js Theme",
+        "description": "Home page for a site built with the E-Commerce ShadCN Built.js Theme.",
+        "shareImage": {
+          "url": "https://res.cloudinary.com/dn7feeelf/image/upload/v1725878797/image_ldyekv.png",
+          "path": "/images/image.png",
+          "width": 1280,
+          "height": 768,
+          "type": "image"
+        },
+        "twitterCardType": "summary"
+      },
+      "templates": ["seo"],
+      "type": "head",
+      "defaultTemplate": { "name": "seo" },
+      "collections": {}
+    },
+    {
       "name": "homeLanding",
       "title": "Home Landing",
       "data": {

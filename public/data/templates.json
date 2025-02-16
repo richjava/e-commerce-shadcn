@@ -11,6 +11,12 @@
       "category": "footers"
     },
     {
+      "name": "seo",
+      "title": "SEO",
+      "category": "head",
+      "description": "Define SEO meta titles, meta descriptions and social media meta data."
+    },
+    {
       "title": "Cover 1",
       "name": "cover1",
       "category": "covers",
