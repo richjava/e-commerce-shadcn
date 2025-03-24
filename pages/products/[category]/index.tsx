@@ -1,5 +1,6 @@
 import { withRouter } from "next/router";
-import { getConfig } from "@builtjs/theme";
+// import { getConfig } from "@builtjs/theme";
+import { getConfig } from "./../../../theme/index";
 import Page from "../../../lib/theme/page";
 import { GetStaticPaths, GetStaticProps  } from "next";
 
