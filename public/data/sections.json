@@ -40,6 +40,7 @@
     {
       "name": "homeLanding",
       "title": "Home Landing",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737712661/builtjs/theme/richjava_e-commerce-shadcn/home-cover1.png",
       "data": {
         "image1": {
           "url": "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=500&h=500&fit=crop&q=80",
@@ -66,12 +67,14 @@
     {
       "name": "productArticleLanding",
       "title": "Product Article Landing",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1738142416/builtjs/theme/richjava_e-commerce-shadcn/product-article-article1.png",
       "templates": ["article1"],
       "defaultTemplate": { "name": "article1" }
     },
     {
       "name": "productCategoryListLanding",
       "title": "Product Category List Landing",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1737713769/productCategoryListLanding_gddyei.png",
       "templates": ["list1"],
       "defaultTemplate": { "name": "list1" },   
       "collections": { "product": {
@@ -88,6 +91,7 @@
     {
       "name": "benefitList",
       "title": "Benefit List",
+      "imageUrl": "https://res.cloudinary.com/dn7feeelf/image/upload/v1738142376/builtjs/theme/richjava_e-commerce-shadcn/home-list2.png",
       "templates": ["list2"],
       "defaultTemplate": { "name": "list2" },   
       "collections": { "benefit": {} }
