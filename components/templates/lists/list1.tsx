@@ -17,7 +17,11 @@ export default function List1({ content, api }: any) {
   useEffect(() => {
     async function fetchData() {
       if (params && params.category && !category) {
-        const cat = await fetchEntry("category", [{ _id: params.category }]);
+        const cat = await fetchEntry("category", [{
+          "field": "_id",
+          "operator": "==",
+          "value": params.category
+        }]);
         if (cat) {
           setCategory(cat);
         }
