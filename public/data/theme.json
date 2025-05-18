@@ -19,7 +19,7 @@
         "tailwindcss-animate",
         "use-shopping-cart"
       ],
-      "devDependencies": ["autoprefixer", "postcss", "tailwindcss"]
+      "devDependencies": ["autoprefixer", "postcss", "tailwindcss", "react@18", "react-dom@18"]
     }
   }
 }
