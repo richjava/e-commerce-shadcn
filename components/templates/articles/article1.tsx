@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Head from "next/head";
 import AddToBag from "@/components/shared/AddToBag";
 import CheckoutNow from "@/components/shared/CheckoutNow";

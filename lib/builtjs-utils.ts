@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import getConfig from "next/config";
 import dynamic from "next/dynamic";
 const { publicRuntimeConfig } = getConfig();

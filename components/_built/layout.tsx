@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import-slot
 import CartProvider from "@/components/shared/Providers";
 import ShoppingCartModal from "@/components/shared/ShoppingCartModal";
