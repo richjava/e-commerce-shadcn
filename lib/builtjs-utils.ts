@@ -26,19 +26,17 @@ export async function getComponentMap(sections: any): Promise<ComponentMap> {
 export function getComponents(sections: any): Promise<React.ComponentType<any>[]> {
   return new Promise((resolve) => {
     getComponentMap(sections).then((map: ComponentMap) => {
-      const comps: React.ComponentType<any>[] = [];
+      const comps: React.ComponentType[] = [];
       for (const key of Object.keys(map)) {
-        const comp = dynamic(() => map[key].then(mod => mod.default));
+        const comp = dynamic(() => map[key], {
+          loading: () => null
+        });
         comps.push(comp);
       }
       resolve(comps);
     });
   });
 }
-
-export const urlForImage = (source: any) => {
-  return `${publicRuntimeConfig.BACKEND_URL || ""}${source?.path}`;
-};
 
 export const widthForImage = (source: any) => source?.width;
 

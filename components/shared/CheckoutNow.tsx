@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/shared/Button";
 import { useShoppingCart } from "use-shopping-cart";
-import { urlForImage } from "@/lib/builtjs-utils";
 import { ProductCart } from "./AddToBag";
 
 export default function CheckoutNow({
@@ -28,7 +27,7 @@ export default function CheckoutNow({
     description: description,
     price: price,
     currency: currency,
-    image: urlForImage(image),
+    image: image,
     price_id: price_id,
   };
   return (
