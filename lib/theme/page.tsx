@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/router";
 import Layout from "@/components/layout";
 import { getComponents } from "@/lib/builtjs-utils";
@@ -13,13 +13,7 @@ const Page = ({ config }: any) => {
   const [sectionComps, setSectionComps] = useState<React.ComponentType<any>[]>([]);
   const [layoutComps, setLayoutComps] = useState<React.ComponentType<any>[]>([]);
 
-  useEffect(() => {
-    setPage(null);
-    setLayoutComps([]);
-    init();
-  }, [slug]);
-
-  async function init() {
+  const init = useCallback(async () => {
     if (!config) {
       return;
     }
@@ -34,7 +28,13 @@ const Page = ({ config }: any) => {
     setPage(page);
     setSectionComps(sectionComponents);
     setLayoutComps(layoutComponents);
-  }
+  }, [config]);
+
+  useEffect(() => {
+    setPage(null);
+    setLayoutComps([]);
+    init();
+  }, [slug, init]);
 
   return (
     <Layout layoutComps={layoutComps} page={page}>

@@ -42,7 +42,7 @@ export default function List1({ content, api }: any) {
       hasFetched.current = true;
       fetchData();
     }
-  }, []);
+  }, [category, content.collections, fetchEntry, params]);
   if (!content) return <></>;
 
   return (
