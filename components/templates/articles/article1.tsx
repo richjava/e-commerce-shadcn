@@ -9,6 +9,7 @@ import { Star, Truck } from "lucide-react";
 export default function Article1({ content }: any) {
   if (!content) return <></>;
   const { entry = null } = { ...content };
+
   return (
     <>
       <Head>
