@@ -16,6 +16,7 @@ export default function Header1({ content }: any) {
   const pathname = usePathname();
   const { handleCartClick } = useShoppingCart();
   if (!content) return <></>;
+  console.log({content})
   const { collections = {}, global = {} } = { ...content };
   
   const NavItems = () => (
@@ -58,7 +59,7 @@ export default function Header1({ content }: any) {
               alt="logo"
             />
           </span>
-          <span className="ml-3 text-xl font-bold text-black uppercase dark:text-white">
+          <span className="ml-3 text-xl font-bold text-black uppercase">
             {global.name}
           </span>
         </Link>
